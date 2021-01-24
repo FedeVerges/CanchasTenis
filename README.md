@@ -80,6 +80,17 @@ i.Se deberá considerar el estado de las canchas que podrá ser (activo o inacti
 por algún motivo, mantenimiento, afectada a torneo, etc. permitiendo o no
 realizar reservas en las mismas.
 
+## **Instrucciones**
+
+### **Backend**
+
+ * Posicionarse en el directorio "/Backend".
+ * correr el comando 
+
+    ```
+    npm run build
+
+    ```
 ## **Deadlines**
 
 ## **Autores**

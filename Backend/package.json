@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend del sistema de resera de canchas",
+  "main": "./src/app.js",
+  "scripts": {
+    "build": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FedeVerges/CanchasTenis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FedeVerges/CanchasTenis/issues"
+  },
+  "homepage": "https://github.com/FedeVerges/CanchasTenis#readme"
+}

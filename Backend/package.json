@@ -2,9 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "backend del sistema de resera de canchas",
-  "main": "./src/app.js",
+  "main": "./src/appTennis.js",
   "scripts": {
-    "build": "node app.js",
+    "build": "node appTennis.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

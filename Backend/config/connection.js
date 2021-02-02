@@ -1,11 +1,12 @@
 const Sequelize = require('sequelize')
 
 //config coneccion a la db
-exports.conn=function(host,user,db,pass){
-    const db = new Sequelize(db,user,pass,{
+exports.conn = function(host,user,bd,pass){
+    const db = new Sequelize(bd,user,pass,{
       host:host,
       dialect: 'mysql',
       operatorsAliases: false,
+      omitNull: true,
       pool: {
         max: 70,
         min: 0,
@@ -25,5 +26,4 @@ exports.conn=function(host,user,db,pass){
         console.error('Error al conectar con la DB:', err);
       })
     return db
-
 }

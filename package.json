@@ -2,7 +2,7 @@
   "name": "canchastenis",
   "version": "1.0.0",
   "description": "Sistema de reserva de canchas de tenis",
-  "main": "index.js",
+  "main": "./backend/appTenis",
   "dependencies": {
     "animate.css": "^4.1.1",
     "boostrap": "^2.0.0",
@@ -20,7 +20,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "dev": "nodemon backend/index.js",
+    "dev": "nodemon ./backend/appTennis",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

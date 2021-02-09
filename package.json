@@ -2,25 +2,20 @@
   "name": "canchastenis",
   "version": "1.0.0",
   "description": "Sistema de reserva de canchas de tenis",
-  "main": "./backend/appTenis",
+  "main": "./backend/appTennis",
   "dependencies": {
     "animate.css": "^4.1.1",
-    "boostrap": "^2.0.0",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.5.0",
-    "webpack": "^5.20.1",
-    "webpack-cli": "^4.5.0"
+    "sequelize": "^6.5.0"
   },
   "devDependencies": {
-    "html-webpack-plugin": "^5.0.0",
     "nodemon": "^2.0.7",
-    "timeago.js": "^4.0.2",
-    "webpack-dev-server": "^3.11.2"
+    "timeago.js": "^4.0.2"
   },
   "scripts": {
-    "dev": "nodemon ./backend/appTennis",
+    "start": "npx nodemon backend/appTennis.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -4,4 +4,5 @@ const express = require('express'),
 
 app.get('/login', (req,res)=>{
     // Aquí deberia ir el metodo que renderice el html del login.
+    console.log("LOGIIIIIIN");
 })

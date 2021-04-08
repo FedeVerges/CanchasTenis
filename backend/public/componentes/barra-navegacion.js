@@ -9,7 +9,7 @@ class BarraNavegacion {
     agregarRuta(nombreRuta) {
         this.rutas.push(nombreRuta)
     }
-
+    
     // Metodo para consultar los permisos.
     // Dependiendo del permiso. Son los botones que muestro.
 
@@ -39,14 +39,12 @@ class BarraNavegacion {
             listaNavegacion.push(elemento)
 
         });
-        console.log(listaNavegacion)
-
 
         const finBarraNavegacion = `
             </ul>
             <form class="form-inline my-2 my-lg-0">
-            <a class="btn btn-outline-success my-2 my-sm-0" href="./ReservarCanchas.html" type="submit">Reserva
-                tu cancha</a>
+            <a id = "boton-reserva" class="btn btn-outline-success my-2 my-sm-0 " onclick=redirectButtonReserva() type="submit">Reserva
+                tu cancha </a>
             </form>
         </div> 
         </nav> `;
@@ -69,14 +67,14 @@ class BarraNavegacion {
         const elementoLista = document.createElement('li');
         elementoLista.classList.add('nav-item');
 
-        console.log(elementoLista.innerHTML)
+        // console.log(elementoLista.innerHTML)
 
         
         // Agrego la referencia a la lista.
         elementoLista.appendChild(referencia)
         this.listaElementosNavegacion.push(elementoLista.outerHTML);
 
-        console.log(this.listaElementosNavegacion)
+        // console.log(this.listaElementosNavegacion)
 
 
         this.render();
@@ -86,9 +84,11 @@ class BarraNavegacion {
 }
 
 // Pedir informacion al servidor y crear barra de navegacion con la información.
-
 const barraNavegacion = new BarraNavegacion('barraNavegacion');
 barraNavegacion.render();
 barraNavegacion.crearReferencia(['nav-link'],'socios.html','Panel de Socios');
+
+
+
 
 

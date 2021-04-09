@@ -53,8 +53,8 @@ class BarraNavegacion {
         barraNavegacionContainer.innerHTML = barraNavegacion;
     }
 
+    // todo: Corregir.
     crearReferencia(classes, href, value) {
-
         // Creo la referencia 'a' a la siguiente pagina.
         const referencia = document.createElement('a');
         classes.forEach((valorClase)=>{
@@ -76,17 +76,18 @@ class BarraNavegacion {
 
         // console.log(this.listaElementosNavegacion)
 
-
         this.render();
-
     }
 
 }
-
 // Pedir informacion al servidor y crear barra de navegacion con la información.
 const barraNavegacion = new BarraNavegacion('barraNavegacion');
 barraNavegacion.render();
 barraNavegacion.crearReferencia(['nav-link'],'socios.html','Panel de Socios');
+
+
+
+
 
 
 

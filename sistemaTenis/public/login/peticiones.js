@@ -1,6 +1,6 @@
 async function postUser(body){ // En este caso se hace un "POST" ya que los datos que enviamos son privados y no podemos enviarlos en URL.
   // Esperamos la respuesta del "fetch".
-  let responseJSON = await fetch('http://localhost:3000/api/login', { // Determinamos el path correspondiente a la API o (EI PI AI)
+  let responseJSON = await fetch('http://localhost:3000/api/checkLogin', { // Determinamos el path correspondiente a la API o (EI PI AI)
     // El fetch = AJAX calls
         method: 'POST', // or 'PUT'   -> DETERMINAMOS EL TIPO DE LA PETICION
         body: JSON.stringify(body), // data can be `string` or {object}!

@@ -21,19 +21,19 @@ function redirectButtonReserva() {
   window.location.href = ("/login/login.html");
 
 }
-
 function manejoRespuesta(response) {
   if (response != undefined) {
     switch (response.status) {
       case 201:
         console.log("201 - OK ");
-        //   localStorage.setItem("token", responseJSON.token); // Guardo token en localstorage
-        // localStorage.setItem("username",responseJSON.user.usuario);// Guardo usuario en localstorage
-        //   window.location.href = localStorage.getItem("redirect"); // Esto redireccionaría a la pagina donde quiere loggearse el usuario
+        localStorage.setItem("token", responseJSON.token); // Guardo token en localstorage
+        localStorage.setItem("username",responseJSON.user.usuario);// Guardo usuario en localstorage
+        window.location.href = localStorage.getItem("redirect"); // Esto redireccionaría a la pagina donde quiere loggearse el usuario
         break;
       case 404:
       case 403:
         console.log("404/403 - NO ");
+        setError(1);
         break;
       default:
         console.log("por defecto");
@@ -41,11 +41,10 @@ function manejoRespuesta(response) {
     }
   } else {
     console.log("VINO NULL - POR QUE NO ESTA ESTA RUTA EN LA API");
+    setError(1);
   }
 }
-/*
-  function setError(i){ // ESTO ES UN CARTEL OA
-    span = document.getElementById("spanError");
-    span.style.opacity = i;
-  }
-*/
+function setError(i){ // ESTO ES UN CARTEL OA
+  span = document.getElementById("spanError");
+  span.style.opacity = i;
+}

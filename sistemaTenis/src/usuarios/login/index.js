@@ -16,7 +16,7 @@ const keyAdmin = "llave del admdinistrador";
 
 // Middleware (se ejecuta antes de todas las peticiones)
 //router.use(morgan("tiny")); // muestra por consola.
-//router.use(express.json()); // convierte datos a json.
+router.use(express.json()); // convierte datos a json. NO ES NECESARIO BODYPARSER.
 
 
 router.all('/*',(req,res,next)=>{ // ESTOS PARAMETROS LOS VEMOS CDO NOS JUNTEMOS PERO ESTA LA CONFIG DE LA CONECCION, ETC
@@ -38,6 +38,7 @@ router.all('/*',(req,res,next)=>{ // ESTOS PARAMETROS LOS VEMOS CDO NOS JUNTEMOS
 router.post("/checkLogin",async (req, res) => { // LE SAQUE LO DEL ENSURETOKEN ... AGREGALO DSP
 
     const user = await getUser(req,res);
+    console.log("USUARIO: ",user)
     var token;
     if(user.usuario != undefined){
       if(user.tipo == "SOCIO"){
@@ -55,6 +56,7 @@ router.post("/checkLogin",async (req, res) => { // LE SAQUE LO DEL ENSURETOKEN .
   // consulta sql
 
   async function getUser(req,res){
+    // TODO: agregar manejo de excepciones en el caso de que alguna propiedad como body.username no exista y explote.
     const usuario = await req.models.usuarios.findOne({
         where:{
             username: req.body.username,

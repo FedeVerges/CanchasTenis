@@ -5,7 +5,7 @@ async function login() {
   //get contraseña
   var pass = document.getElementById('password');
   pass = pass.value;
-  var data = { // Creamos JSON para enviar a la API y no den el OK de validación
+  const data = { // Creamos JSON para enviar a la API y no den el OK de validación
     username: user,
     password: pass
   }; // IGUAL SIRVE PARA DAR DE ALTA
